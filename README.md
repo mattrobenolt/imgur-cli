@@ -1,2 +1,2 @@
-# imgur-cli
+# $ imgur
 upload clipboard data to imgur
