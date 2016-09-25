@@ -1,12 +1,16 @@
 import Foundation
 import AppKit
 
+let VERSION = "0.0.1"
+
 func usage(_ code: Int32) {
     print("Usage: \(CommandLine.arguments[0]) [OPTIONS]\n")
     print("  Upload image data from your clipboard to imgur.\n")
     print("Options:")
     print("  --help/-h  Show this message and exit.")
     print("  --no-copy  Don't copy link to your clipboard.")
+    print("  --version  Print program version and exit.")
+    print("\nVersion \(VERSION)")
     exit(code)
 }
 
@@ -18,6 +22,9 @@ for argument in CommandLine.arguments[1..<CommandLine.arguments.count] {
         usage(0)
     case "--no-copy":
         noCopy = true
+    case "--version":
+        print(VERSION)
+        exit(0)
     default:
         usage(1)
     }
