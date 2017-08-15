@@ -1,7 +1,7 @@
 import Foundation
 import AppKit
 
-let VERSION = "0.0.1"
+let VERSION = "0.0.2"
 
 func usage(_ code: Int32) {
     print("Usage: \(CommandLine.arguments[0]) [OPTIONS]\n")
