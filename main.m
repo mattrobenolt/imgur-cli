@@ -87,7 +87,7 @@ int main(int argc, const char *argv[]) {
     // finish
     dispatch_semaphore_t sema = dispatch_semaphore_create(0);
 
-    NSTask *task = [[NSURLSession sharedSession]
+    NSURLSessionDataTask *task = [[NSURLSession sharedSession]
         dataTaskWithRequest:request
           completionHandler:^(NSData *_Nullable data,
                               NSURLResponse *_Nullable response,
