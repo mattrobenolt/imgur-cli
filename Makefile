@@ -1,9 +1,14 @@
-CONFIG ?= debug
+BIN = imgur
 
-build:
-	swift build -v -c $(CONFIG)
+all: $(BIN)
+
+$(BIN): main.m
+	clang -v $< -fobjc-arc -mmacosx-version-min=10.6 -framework AppKit -o $@
+
+format: main.m
+	clang-format -i $<
 
 clean:
-	rm -rf .build
+	rm -f $(BIN)
 
-.PHONY: build clean
+.PHONY: all format clean
