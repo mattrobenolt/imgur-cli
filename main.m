@@ -1,7 +1,7 @@
 #import <AppKit/AppKit.h>
 #import <Foundation/Foundation.h>
 
-const char *VERSION = "0.0.3";
+#define VERSION "0.0.3"
 
 int usage(const char *program) {
   printf("Usage: %s [OPTIONS]\n\n", program);
@@ -62,7 +62,8 @@ int main(int argc, const char *argv[]) {
     [request setHTTPMethod:@"POST"];
     [request setValue:[NSString stringWithFormat:@"Client-Id %@", clientId]
         forHTTPHeaderField:@"Authorization"];
-    [request setValue:@"imgur-cli" forHTTPHeaderField:@"User-Agent"];
+    [request setValue:[NSString stringWithFormat:@"imgur-cli/%s", VERSION]
+        forHTTPHeaderField:@"User-Agent"];
 
     // We have to hand craft our multipart form request to upload the image data
     NSString *boundary = [[NSUUID UUID] UUIDString];
