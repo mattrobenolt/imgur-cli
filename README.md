@@ -12,7 +12,7 @@ $ brew install mattrobenolt/stuff/imgur-cli
 ### via curl
 
 ```bash
-$ curl -sSL https://github.com/mattrobenolt/imgur-cli/releases/download/0.0.1/imgur > /usr/local/bin/imgur && chmod +x /usr/local/bin/imgur
+$ curl -sSL https://github.com/mattrobenolt/imgur-cli/releases/download/0.0.3/imgur > /usr/local/bin/imgur && chmod +x /usr/local/bin/imgur
 ```
 
 ## usage
